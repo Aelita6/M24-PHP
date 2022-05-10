@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^ecsample\.com$ [NC]
+RewriteRule .* index.php [L]
+#401 Авторизация не выполнена
+ErrorDocument 401 http://ecsample.com/errors/401.html
+#403 Доступ запрещен
+ErrorDocument 403 http://ecsample.com/errors/403.html
+#404 Страница не найдена
+ErrorDocument 404 http://ecsample.com/errors/404.html
+#500 Внутренняя ошибка сервера
+ErrorDocument 500 http://ecsample.com/errors/500.html
